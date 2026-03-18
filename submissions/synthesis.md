@@ -1,6 +1,6 @@
 # YieldGuard Liquidity Rail
 
-- **Repo:** TODO_GITHUB_URL/Synthesis-Uniswap-AgenticFinance
+- **Repo:** https://github.com/CrystallineButterfly/Synthesis-Uniswap-AgenticFinance
 - **Primary track:** Uniswap Agentic Finance
 - **Overlap targets:** Lido stETH Treasury, Bankr Gateway, Filecoin, Celo, MetaMask Delegations, PayWithLocus, Bond.credit
 - **Primary contract:** UniswapExecutionGuard
