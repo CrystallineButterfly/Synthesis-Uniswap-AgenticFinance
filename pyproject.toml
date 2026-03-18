@@ -1,0 +1,16 @@
+[project]
+name = "synthesis_uniswap_agenticfinance"
+version = "0.1.0"
+description = "An agentic liquidity rail that only deploys approved yield into swaps, hooks-aware liquidity moves, and cross-chain settlement with dry-run receipts."
+readme = "README.md"
+requires-python = ">=3.13"
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ty.terminal]
+error-on-warning = true
+
+[tool.ty.environment]
+python-version = "3.13"
