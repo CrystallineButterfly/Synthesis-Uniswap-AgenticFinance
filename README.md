@@ -1,118 +1,93 @@
 # YieldGuard Liquidity Rail
 
-        **Repo:** `Synthesis-Uniswap-AgenticFinance`  
-        **Primary track:** Uniswap Agentic Finance  
-        **Submission hold:** wait for human approval before registration or live submission.
+- **Repo:** `Synthesis-Uniswap-AgenticFinance`
+- **Primary track:** Uniswap Agentic Finance
+- **Category:** trading
+- **Submission status:** implementation ready, waiting for credentials and TxIDs.
 
-        An agentic liquidity rail that only deploys approved yield into swaps, hooks-aware liquidity moves, and cross-chain settlement with dry-run receipts.
+An agentic liquidity rail that only deploys approved yield into swaps, hooks-aware liquidity moves, and cross-chain settlement with dry-run receipts.
 
-        ## Selected concept
+## Selected concept
 
-        Python agents watch Uniswap and partner signals, assemble bounded rebalance plans, and record dry-run hashes before any spend. A policy contract enforces targets, caps, and cooldowns while demo scripts outline how real swaps, bridge legs, and settlement receipts will be attached once API keys and wallets are loaded.
+Python agents watch Uniswap and partner signals, assemble bounded rebalance plans, and record dry-run hashes before any spend. A policy contract enforces targets, caps, and cooldowns while demo scripts outline how real swaps, bridge legs, and settlement receipts will be attached once API keys and wallets are loaded.
 
-        ## Idea set
+## Idea shortlist
 
-        1. Autonomous Cross-Chain Arbitrage Swarm
+1. Autonomous Cross-Chain Arbitrage Swarm
 2. Hooks-Aware Yield Rebalancer
 3. Proof-of-Liquidity Treasury Agent
 
-        ## Prize overlap targets
+## Partners covered
 
-        - Lido stETH Treasury
-- Bankr Gateway
-- Filecoin
-- Celo
-- MetaMask Delegations
-- PayWithLocus
-- Bond.credit
+Uniswap, Lido, Bankr Gateway, Filecoin, Celo, MetaMask Delegations, PayWithLocus, Bond.credit
 
-        ## Architecture
+## Architecture
 
-        ```mermaid
-        flowchart TD
-    Signals[Uniswap Agentic Finance signals] --> Discover[Discover]
-    Discover --> Plan[Plan bounded action]
-    Plan --> DryRun[Dry run + policy check]
-    DryRun --> Guard[UniswapExecutionGuard]
-    Guard --> Execute[Execute when live mode is enabled]
-    Execute --> Verify[Verify proofs + receipts]
-    Verify --> Persist[Write agent_log.json + submission snippet]
-    Persist --> Storage[Store proof plan for Filecoin / receipts]
-        ```
+```mermaid
+flowchart TD
+    Signals[Discover signals]
+    Planner[Agent runtime]
+    DryRun[Dry-run artifact]
+    Contract[UniswapExecutionGuard policy contract]
+    Verify[Verify and render submission]
+    Signals --> Planner --> DryRun --> Contract --> Verify
+    Contract --> uniswap[Uniswap]
+    Contract --> lido[Lido]
+    Contract --> bankr_gateway[Bankr Gateway]
+    Contract --> filecoin[Filecoin]
+    Contract --> celo[Celo]
+    Contract --> metamask_delegations[MetaMask Delegations]
+```
 
-        ## Repo structure
+## Repository layout
 
-        ```text
-        Synthesis-Uniswap-AgenticFinance/
-├── README.md
-├── LICENSE
-├── .env.example
-├── .gitignore
-├── agent.json
-├── agent_log.json
-├── pyproject.toml
-├── Makefile
-├── docs/
-│   ├── architecture.mmd
-│   ├── demo_video_script.md
-│   └── security.md
-├── src/
-│   └── UniswapExecutionGuard.sol
-├── script/
-│   └── Deploy.s.sol
-├── agents/
-│   ├── __init__.py
-│   └── uniswap_agent.py
-├── scripts/
-│   ├── run_agent.py
-│   └── plan_live_demo.py
-├── submissions/
-│   └── synthesis.md
-└── tests/
-    └── test_project_context.py
-        ```
+- `src/`: shared policy contracts plus the repo-specific wrapper contract.
+- `script/`: Foundry deployment entrypoint.
+- `agents/`: Python runtime, partner adapters, and project metadata.
+- `scripts/`: CLI utilities for running the loop and rendering submissions.
+- `docs/`: architecture, credentials, demo script, and security notes.
+- `submissions/`: generated `synthesis.md` snippet for this repo.
 
-        ## Tech stack
+## Action catalog
 
-        Solidity 0.8.24 skeleton, Python 3.13 standard library, JSON manifests, Foundry-style layout, MIT license
+| Action | Partner | Purpose | Max USD | Sensitivity |
+| --- | --- | --- | --- | --- |
+| `uniswap_quote_route` | Uniswap | Use Uniswap for a bounded action in this repo. | $220 | medium |
+| `lido_yield_route` | Lido | Use Lido for a bounded action in this repo. | $200 | medium |
+| `bankr_gateway_compute_route` | Bankr Gateway | Use Bankr Gateway for a bounded action in this repo. | $10 | high |
+| `filecoin_proof_store` | Filecoin | Use Filecoin for a bounded action in this repo. | $20 | medium |
+| `celo_payment_settle` | Celo | Use Celo for a bounded action in this repo. | $150 | low |
+| `metamask_delegations_delegate_scope` | MetaMask Delegations | Use MetaMask Delegations for a bounded action in this repo. | $2 | high |
+| `paywithlocus_subaccount_pay` | PayWithLocus | Use PayWithLocus for a bounded action in this repo. | $120 | medium |
+| `bond_credit_credit_trade` | Bond.credit | Use Bond.credit for a bounded action in this repo. | $90 | high |
 
-        ## Security guardrails
+## Commands
 
-        - principal and spend policies are separated by design
-        - whitelist, cap, and cooldown checks gate every action
-        - dry-run hashes are recorded before any live execution path
-        - compute budgets are explicit and live mode is opt-in
-        - secrets are loaded from environment variables only
-        - structured logs are appended for every discover-plan-execute-verify step
+```bash
+python3 -m unittest discover -s tests
+forge test
+python3 scripts/run_agent.py
+python3 scripts/plan_live_demo.py
+python3 scripts/render_submission.py
+```
 
-        ## Autonomy loop
+## Credentials
 
-        1. Discover candidate signals and external state.
-2. Plan an action bundle with explicit budget, target, and purpose.
-3. Run a dry-run check and policy validation before any execution path.
-4. Execute only when live mode, wallets, and credentials are supplied.
-5. Verify receipts, proofs, and notes, then append structured logs.
+| Partner | Variables | Docs |
+| --- | --- | --- |
+| Uniswap | UNISWAP_API_KEY, UNISWAP_QUOTE_URL | https://developers.uniswap.org/ |
+| Lido | RPC_URL | https://docs.lido.fi/ |
+| Bankr Gateway | BANKR_API_KEY, BANKR_CHAT_COMPLETIONS_URL, BANKR_MODEL | https://bankr.bot/ |
+| Filecoin | FILECOIN_API_TOKEN, FILECOIN_UPLOAD_URL | https://docs.filecoin.cloud/ |
+| Celo | CELO_RPC_URL | https://docs.celo.org/ |
+| MetaMask Delegations | RPC_URL | https://docs.metamask.io/delegation-toolkit/ |
+| PayWithLocus | LOCUS_API_KEY, LOCUS_PAYMENT_URL | https://docs.locus.finance/ |
+| Bond.credit | GMX_ORDER_URL, BOND_CREDIT_PROFILE_URL | https://bond.credit/ |
 
-        ## Local MVP status
+## Live demo plan
 
-        - [x] README, manifests, and security notes created
-        - [x] contract and agent-loop skeletons created
-        - [x] local git repository initialized with an initial commit
-        - [ ] operator wallet addresses attached
-        - [ ] real API keys added through `.env`
-        - [ ] live TxIDs recorded
-        - [ ] registration and submission executed
-
-        ## Live demo and TxID plan
-
-        1. load real credentials into `.env`
-        2. run `python3 scripts/plan_live_demo.py` to print the checklist
-        3. replace placeholder wallet fields in `agent.json`
-        4. enable `LIVE_MODE=true` for controlled execution
-        5. record resulting TxIDs and paste them into `submissions/synthesis.md`
-
-        ## Why this ranks first
-
-        This concept ranks highest because it overlaps Lido stETH Treasury, Bankr Gateway, Filecoin while keeping the
-        execution envelope explicit, dry-run-first, and honest about what still needs
-        real credentials before anything touches a chain.
+1. Copy .env.example to .env and fill the required keys.
+2. Deploy the contract with forge script script/Deploy.s.sol --broadcast for UniswapExecutionGuard.
+3. Run python3 scripts/run_agent.py to produce a dry run for uniswap_agent.
+4. Set LIVE_MODE=true and rerun python3 scripts/run_agent.py with real credentials.
+5. Run python3 scripts/render_submission.py and attach TxIDs plus repo links.
