@@ -7,5 +7,593 @@
     "details": {
       "status": "ready_for_credentials"
     }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:25+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "market_route",
+          "description": "Quotes, liquidity windows, and execution candidates.",
+          "score": 95
+        },
+        {
+          "name": "risk_policy",
+          "description": "Caps, cooldowns, and verification gates.",
+          "score": 90
+        },
+        {
+          "name": "execution_bundle",
+          "description": "Prepared route and settlement metadata.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Trade digests, proofs, and reporting notes.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:25+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan.",
+    "details": {
+      "plan_id": "0x92dba53d54afc923c2f4eb52347daa18e5e2a4c01d1c859c5de5d6ef8bb4e888"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:25+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0x0924ffbd3a9390b7f194dc4293cccd99eb785b5c129480b52b797449d550cc92"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:25+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Skipped live execution.",
+    "details": {
+      "missing_env": [
+        "BANKR_API_KEY",
+        "BANKR_CHAT_COMPLETIONS_URL",
+        "BANKR_MODEL",
+        "BOND_CREDIT_PROFILE_URL",
+        "CELO_RPC_URL",
+        "FILECOIN_API_TOKEN",
+        "FILECOIN_UPLOAD_URL",
+        "GMX_ORDER_URL",
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "RPC_URL",
+        "UNISWAP_API_KEY",
+        "UNISWAP_QUOTE_URL"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:25+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "YieldGuard Liquidity Rail",
+      "track": "Uniswap Agentic Finance",
+      "plan_id": "0x92dba53d54afc923c2f4eb52347daa18e5e2a4c01d1c859c5de5d6ef8bb4e888",
+      "simulation_hash": "0x0924ffbd3a9390b7f194dc4293cccd99eb785b5c129480b52b797449d550cc92",
+      "execution_status": "awaiting_credentials",
+      "tx_ids": [],
+      "created_at": "2026-03-19T03:30:25+00:00"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:25+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "market_route",
+          "description": "Quotes, liquidity windows, and execution candidates.",
+          "score": 95
+        },
+        {
+          "name": "risk_policy",
+          "description": "Caps, cooldowns, and verification gates.",
+          "score": 90
+        },
+        {
+          "name": "execution_bundle",
+          "description": "Prepared route and settlement metadata.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Trade digests, proofs, and reporting notes.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:25+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan.",
+    "details": {
+      "plan_id": "0x92dba53d54afc923c2f4eb52347daa18e5e2a4c01d1c859c5de5d6ef8bb4e888"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:25+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0x0924ffbd3a9390b7f194dc4293cccd99eb785b5c129480b52b797449d550cc92"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:25+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Skipped live execution.",
+    "details": {
+      "missing_env": [
+        "BANKR_API_KEY",
+        "BANKR_CHAT_COMPLETIONS_URL",
+        "BANKR_MODEL",
+        "BOND_CREDIT_PROFILE_URL",
+        "CELO_RPC_URL",
+        "FILECOIN_API_TOKEN",
+        "FILECOIN_UPLOAD_URL",
+        "GMX_ORDER_URL",
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "RPC_URL",
+        "UNISWAP_API_KEY",
+        "UNISWAP_QUOTE_URL"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:30:25+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "YieldGuard Liquidity Rail",
+      "track": "Uniswap Agentic Finance",
+      "plan_id": "0x92dba53d54afc923c2f4eb52347daa18e5e2a4c01d1c859c5de5d6ef8bb4e888",
+      "simulation_hash": "0x0924ffbd3a9390b7f194dc4293cccd99eb785b5c129480b52b797449d550cc92",
+      "execution_status": "awaiting_credentials",
+      "tx_ids": [],
+      "created_at": "2026-03-19T03:30:25+00:00"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:39:23.678178+00:00",
+    "stage": "security_review",
+    "actor": "audit_pass",
+    "message": "Completed the shared hardening and offline-artifact audit pass.",
+    "details": {
+      "status": "audited_ready_pending_live_credentials",
+      "primary_contract": "UniswapExecutionGuard.sol"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:49:11+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "market_route",
+          "description": "Quotes, liquidity windows, and execution candidates.",
+          "score": 95
+        },
+        {
+          "name": "risk_policy",
+          "description": "Caps, cooldowns, and verification gates.",
+          "score": 90
+        },
+        {
+          "name": "execution_bundle",
+          "description": "Prepared route and settlement metadata.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Trade digests, proofs, and reporting notes.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:49:11+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan for every repo action.",
+    "details": {
+      "plan_id": "0x76209f5d96d87ac5e0886c5b30c210ac053623c745e542247658cdf57b642d28",
+      "action_count": 8
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:49:11+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0x4db97e65df0e1547b639615db028d9ff9f592880227a658624338c930423e2ec"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:49:11+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Prepared offline artifacts and skipped network execution.",
+    "details": {
+      "missing_env": [
+        "BANKR_API_KEY",
+        "BANKR_CHAT_COMPLETIONS_URL",
+        "BANKR_MODEL",
+        "BOND_CREDIT_PROFILE_URL",
+        "GMX_ORDER_URL",
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "UNISWAP_API_KEY",
+        "UNISWAP_QUOTE_URL"
+      ],
+      "artifact_count": 4
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:49:11+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "YieldGuard Liquidity Rail",
+      "track": "Uniswap Agentic Finance",
+      "plan_id": "0x76209f5d96d87ac5e0886c5b30c210ac053623c745e542247658cdf57b642d28",
+      "simulation_hash": "0x4db97e65df0e1547b639615db028d9ff9f592880227a658624338c930423e2ec",
+      "execution_status": "offline_prepared",
+      "tx_ids": [],
+      "artifact_paths": [
+        "artifacts/onchain_intents/lido_yield_route.json",
+        "artifacts/filecoin/0x76209f5d96d87ac5e0886c5b30c210ac053623c745e542247658cdf57b642d28.json",
+        "artifacts/onchain_intents/celo_payment_settle.json",
+        "artifacts/onchain_intents/metamask_delegations_delegate_scope.json"
+      ],
+      "partner_statuses": {
+        "Uniswap": "awaiting_credentials",
+        "Lido": "prepared_contract_call",
+        "Bankr Gateway": "awaiting_credentials",
+        "Filecoin": "prepared_filecoin_bundle",
+        "Celo": "prepared_contract_call",
+        "MetaMask Delegations": "prepared_contract_call",
+        "PayWithLocus": "awaiting_credentials",
+        "Bond.credit": "awaiting_credentials"
+      },
+      "created_at": "2026-03-19T03:49:11+00:00"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:50:51+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "market_route",
+          "description": "Quotes, liquidity windows, and execution candidates.",
+          "score": 95
+        },
+        {
+          "name": "risk_policy",
+          "description": "Caps, cooldowns, and verification gates.",
+          "score": 90
+        },
+        {
+          "name": "execution_bundle",
+          "description": "Prepared route and settlement metadata.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Trade digests, proofs, and reporting notes.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:50:51+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan for every repo action.",
+    "details": {
+      "plan_id": "0xe64c60a617da4da8998cc81ff3dcd02de4c1e4725ce22c9b08d1d1fc29e57cce",
+      "action_count": 8
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:50:51+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0x4c8d43a7245246c242e8b3ce56d7360d10e3edd159b4ff936bec972793876e8f"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:50:51+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Prepared offline artifacts and skipped network execution.",
+    "details": {
+      "missing_env": [
+        "BANKR_API_KEY",
+        "BANKR_CHAT_COMPLETIONS_URL",
+        "BANKR_MODEL",
+        "BOND_CREDIT_PROFILE_URL",
+        "GMX_ORDER_URL",
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "UNISWAP_API_KEY",
+        "UNISWAP_QUOTE_URL"
+      ],
+      "artifact_count": 4
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:50:51+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "YieldGuard Liquidity Rail",
+      "track": "Uniswap Agentic Finance",
+      "plan_id": "0xe64c60a617da4da8998cc81ff3dcd02de4c1e4725ce22c9b08d1d1fc29e57cce",
+      "simulation_hash": "0x4c8d43a7245246c242e8b3ce56d7360d10e3edd159b4ff936bec972793876e8f",
+      "execution_status": "offline_prepared",
+      "tx_ids": [],
+      "artifact_paths": [
+        "artifacts/onchain_intents/lido_yield_route.json",
+        "artifacts/filecoin/0xe64c60a617da4da8998cc81ff3dcd02de4c1e4725ce22c9b08d1d1fc29e57cce.json",
+        "artifacts/onchain_intents/celo_payment_settle.json",
+        "artifacts/onchain_intents/metamask_delegations_delegate_scope.json"
+      ],
+      "partner_statuses": {
+        "Uniswap": "awaiting_credentials",
+        "Lido": "prepared_contract_call",
+        "Bankr Gateway": "awaiting_credentials",
+        "Filecoin": "prepared_filecoin_bundle",
+        "Celo": "prepared_contract_call",
+        "MetaMask Delegations": "prepared_contract_call",
+        "PayWithLocus": "awaiting_credentials",
+        "Bond.credit": "awaiting_credentials"
+      },
+      "created_at": "2026-03-19T03:50:51+00:00"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:51:49+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "market_route",
+          "description": "Quotes, liquidity windows, and execution candidates.",
+          "score": 95
+        },
+        {
+          "name": "risk_policy",
+          "description": "Caps, cooldowns, and verification gates.",
+          "score": 90
+        },
+        {
+          "name": "execution_bundle",
+          "description": "Prepared route and settlement metadata.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Trade digests, proofs, and reporting notes.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:51:49+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan for every repo action.",
+    "details": {
+      "plan_id": "0x6da81bbc589ffdc38eb70bf9d9c1dc112f79d36b2eb925b502998cf0252bfc05",
+      "action_count": 8
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:51:49+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0x33095129c1c9b7aebfc8656e439eaf31820730edbe1cc72f75321665308b86af"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:51:49+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Prepared offline artifacts and skipped network execution.",
+    "details": {
+      "missing_env": [
+        "BANKR_API_KEY",
+        "BANKR_CHAT_COMPLETIONS_URL",
+        "BANKR_MODEL",
+        "BOND_CREDIT_PROFILE_URL",
+        "GMX_ORDER_URL",
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "UNISWAP_API_KEY",
+        "UNISWAP_QUOTE_URL"
+      ],
+      "artifact_count": 4
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:51:49+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "YieldGuard Liquidity Rail",
+      "track": "Uniswap Agentic Finance",
+      "plan_id": "0x6da81bbc589ffdc38eb70bf9d9c1dc112f79d36b2eb925b502998cf0252bfc05",
+      "simulation_hash": "0x33095129c1c9b7aebfc8656e439eaf31820730edbe1cc72f75321665308b86af",
+      "execution_status": "offline_prepared",
+      "tx_ids": [],
+      "artifact_paths": [
+        "artifacts/onchain_intents/lido_yield_route.json",
+        "artifacts/filecoin/0x6da81bbc589ffdc38eb70bf9d9c1dc112f79d36b2eb925b502998cf0252bfc05.json",
+        "artifacts/onchain_intents/celo_payment_settle.json",
+        "artifacts/onchain_intents/metamask_delegations_delegate_scope.json"
+      ],
+      "partner_statuses": {
+        "Uniswap": "awaiting_credentials",
+        "Lido": "prepared_contract_call",
+        "Bankr Gateway": "awaiting_credentials",
+        "Filecoin": "prepared_filecoin_bundle",
+        "Celo": "prepared_contract_call",
+        "MetaMask Delegations": "prepared_contract_call",
+        "PayWithLocus": "awaiting_credentials",
+        "Bond.credit": "awaiting_credentials"
+      },
+      "created_at": "2026-03-19T03:51:49+00:00"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:52:21+00:00",
+    "stage": "discover",
+    "actor": "agent_runtime",
+    "message": "Ranked local signals.",
+    "details": {
+      "signals": [
+        {
+          "name": "market_route",
+          "description": "Quotes, liquidity windows, and execution candidates.",
+          "score": 95
+        },
+        {
+          "name": "risk_policy",
+          "description": "Caps, cooldowns, and verification gates.",
+          "score": 90
+        },
+        {
+          "name": "execution_bundle",
+          "description": "Prepared route and settlement metadata.",
+          "score": 85
+        },
+        {
+          "name": "receipts",
+          "description": "Trade digests, proofs, and reporting notes.",
+          "score": 80
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:52:21+00:00",
+    "stage": "plan",
+    "actor": "agent_runtime",
+    "message": "Built bounded plan for every repo action.",
+    "details": {
+      "plan_id": "0x119ba7c4db56bd384237b1454e13137966e653b2adcb50864801085aafcdf1ae",
+      "action_count": 8
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:52:21+00:00",
+    "stage": "dry_run",
+    "actor": "agent_runtime",
+    "message": "Prepared partner previews.",
+    "details": {
+      "simulation_hash": "0xd485cd7c1c2524a6f6d2d269012cd7a127d8531b8435695d17d0b3d75a80641c"
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:52:21+00:00",
+    "stage": "execute",
+    "actor": "agent_runtime",
+    "message": "Prepared offline artifacts and skipped network execution.",
+    "details": {
+      "missing_env": [
+        "BANKR_API_KEY",
+        "BANKR_CHAT_COMPLETIONS_URL",
+        "BANKR_MODEL",
+        "BOND_CREDIT_PROFILE_URL",
+        "GMX_ORDER_URL",
+        "LOCUS_API_KEY",
+        "LOCUS_PAYMENT_URL",
+        "UNISWAP_API_KEY",
+        "UNISWAP_QUOTE_URL"
+      ],
+      "artifact_count": 4
+    }
+  },
+  {
+    "timestamp": "2026-03-19T03:52:21+00:00",
+    "stage": "verify",
+    "actor": "agent_runtime",
+    "message": "Wrote verification.",
+    "details": {
+      "status": "verified",
+      "project_name": "YieldGuard Liquidity Rail",
+      "track": "Uniswap Agentic Finance",
+      "plan_id": "0x119ba7c4db56bd384237b1454e13137966e653b2adcb50864801085aafcdf1ae",
+      "simulation_hash": "0xd485cd7c1c2524a6f6d2d269012cd7a127d8531b8435695d17d0b3d75a80641c",
+      "execution_status": "offline_prepared",
+      "tx_ids": [],
+      "artifact_paths": [
+        "artifacts/onchain_intents/lido_yield_route.json",
+        "artifacts/filecoin/0x119ba7c4db56bd384237b1454e13137966e653b2adcb50864801085aafcdf1ae.json",
+        "artifacts/onchain_intents/celo_payment_settle.json",
+        "artifacts/onchain_intents/metamask_delegations_delegate_scope.json"
+      ],
+      "partner_statuses": {
+        "Uniswap": "awaiting_credentials",
+        "Lido": "prepared_contract_call",
+        "Bankr Gateway": "awaiting_credentials",
+        "Filecoin": "prepared_filecoin_bundle",
+        "Celo": "prepared_contract_call",
+        "MetaMask Delegations": "prepared_contract_call",
+        "PayWithLocus": "awaiting_credentials",
+        "Bond.credit": "awaiting_credentials"
+      },
+      "created_at": "2026-03-19T03:52:21+00:00"
+    }
   }
 ]
